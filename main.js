@@ -119,7 +119,7 @@ const Game = (() => {
   };
 
   const checkForDraw = () => {
-    if (!(GameBoard.get().includes(""))) {
+    if (!(GameBoard.get().includes("")) && !gameOver) {
       gameOver = true;
       announcer.textContent = "It's a draw!";
       newGameButton.style.display = "block";
